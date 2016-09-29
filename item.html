@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yatohime Database</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- JavaScript Framework-->
+  <script src="Script/angular.js"></script>
+  <script src="Script/jquery.js"></script>
+  <script src="Script/bootstrap.js"></script>
+  
+  <!-- CSS Framework -->
+  <link rel="stylesheet" href="Styles/bootstrap.css">
+  
+  <!-- My Script --> 
+  <script src="Script/Script.js"></script>
+  
+  <!-- My Style -->
+  <link rel="stylesheet" href="Styles/main.css">
+  
+
+</head>
+
+<body ng-app="myApp" >
+	<!-- Header Navigation Goes Here -->
+	<header ng-include="'navigation.htm'">
+	
+	</header>
+	
+	
+	<!-- Main Menu Goes Here -->
+	
+
+	<div class="List-Item" id="List-Item">
+		<center>
+			<div class="container-fluid col-sm-8 col-sm-offset-2">
+				<div>
+
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#TAB-Wallet" aria-controls="home" role="tab" data-toggle="tab">Wallet</a></li>
+					<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Bag</a></li>
+					<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Exclusive Wallet</a></li>
+					<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Glasses</a></li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="TAB-Wallet" ng-controller="walletCtrl">
+						<div class="input-group col-sm-12">
+						  <h2> Search </h2>
+						  <input type="text" class="form-control" aria-label="..." ng-model="search_wallet">
+						</div>
+						<table class="table">
+							<thead>
+								<th> Item Name </th>
+								<th> 1-3 PCS </th>
+								<th> 4-29 PCS </th>
+								<th> 50 PCS </th>
+								<th> 100 PCS </th>
+								<th> 300 PCS </th>
+								<th> HET </th>
+							</thead>
+							<tbody>
+								<tr ng-repeat="x in wallets | filter : search_wallet">
+									<td>{{ x.NAME }}</td>
+									<td>{{ x.PRICE1 | currency : "IDR "}}</td>
+									<td>{{ x.PRICE2 | currency : "IDR "}}</td>
+									<td>{{ x.PRICE3 | currency : "IDR "}}</td>
+									<td>{{ x.PRICE4 | currency : "IDR "}}</td>
+									<td>{{ x.PRICE5 | currency : "IDR "}}</td>
+									<td class="info">{{ x.HET | currency : "IDR "}}</td>
+								  </tr>
+							</tbody>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="profile">..2.</div>
+					<div role="tabpanel" class="tab-pane" id="messages">.3..</div>
+					<div role="tabpanel" class="tab-pane" id="settings">.34..</div>
+					</div>
+
+				</div>
+				
+			</div>
+		</center>
+	</div>
+
+</body>
+
+
+
+</html>
+

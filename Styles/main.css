@@ -1,0 +1,56 @@
+/* Variable Declaration */
+body #main-content .btn {
+  font-family: "calluna", serif;
+  font-size: 1.2em;
+}
+body #MainMenu {
+  background-color: #DFE2DB;
+}
+.type-big {
+  height: 50px;
+}
+.type-normal {
+  height: 50px;
+}
+.type-wide {
+  height: 50px;
+}
+.type-tall {
+  height: 50px;
+}
+.button-text {
+  display: block;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  color: black;
+  top: 50%;
+  font-family: "calluna", serif;
+  text-transform: uppercase;
+  padding: 0 10px;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .type-big {
+    height: 300px;
+  }
+  .type-tall {
+    height: 300px;
+  }
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .type-big {
+    height: 300px;
+  }
+  .type-tall {
+    height: 300px;
+  }
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+
+/*# sourceMappingURL=main.css.map */
