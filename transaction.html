@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Yatohime Database</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- JavaScript Framework-->
+  <script src="Script/angular.js"></script>
+  <script src="Script/jquery.js"></script>
+  <script src="Script/bootstrap.js"></script>
+  
+  <!-- CSS Framework -->
+  <link rel="stylesheet" href="Styles/bootstrap.css">
+  
+  <!-- My Script --> 
+  <script src="Script/Script.js"></script>
+  
+  <!-- My Style -->
+  <link rel="stylesheet" href="Styles/main.css">
+
+</head>
+
+<body ng-app="myApp" >
+	<!-- Header Navigation Goes Here -->
+	<header ng-include="'navigation.htm'">
+	
+	</header>
+	
+	
+	<!-- Main Menu Goes Here -->
+	
+
+	<div class="List-Item" id="List-Item">
+			<div class="container-fluid col-sm-8 col-sm-offset-2">
+				<div>
+
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#TAB-Add" aria-controls="home" role="tab" data-toggle="tab">Add Transaction</a></li>
+					<li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Bag</a></li>
+					<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Exclusive Wallet</a></li>
+					<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Glasses</a></li>
+					</ul>
+
+					<!-- Tab panes -->
+					<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="TAB-Add">
+						<form>
+							<div class="form-group">
+								<label for="formGroupExampleInput">Date</label>
+								<input type="date" class="form-control" id="datePicker" placeholder="Example input" value="">
+							</div>
+							<div class="form-group">
+								<label for="formGroupExampleInput2">Item Name</label>
+								<input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+							</div>
+						</form>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="profile">..2.</div>
+					<div role="tabpanel" class="tab-pane" id="messages">.3..</div>
+					<div role="tabpanel" class="tab-pane" id="settings">.34..</div>
+					</div>
+
+				</div>
+				
+			</div>
+	</div>
+
+</body>
+
+
+
+</html>
+
